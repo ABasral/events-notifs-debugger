@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(88, 166, 255, 0.3);
+}
+
+/* Base styles */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-dark-accent text-white hover:bg-blue-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark-surface border border-dark-border text-dark-text hover:bg-dark-border;
+  }
+  
+  .btn-danger {
+    @apply bg-dark-error text-white hover:bg-red-600;
+  }
+  
+  .input {
+    @apply bg-dark-surface border border-dark-border rounded-md px-3 py-2 text-dark-text 
+           focus:outline-none focus:border-dark-accent focus:ring-1 focus:ring-dark-accent;
+  }
+  
+  .card {
+    @apply bg-dark-surface border border-dark-border rounded-lg;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  .badge-success {
+    @apply bg-green-900/50 text-dark-success border border-green-800;
+  }
+  
+  .badge-warning {
+    @apply bg-yellow-900/50 text-dark-warning border border-yellow-800;
+  }
+  
+  .badge-error {
+    @apply bg-red-900/50 text-dark-error border border-red-800;
+  }
+  
+  .badge-info {
+    @apply bg-blue-900/50 text-dark-accent border border-blue-800;
+  }
+  
+  .badge-neutral {
+    @apply bg-dark-border text-dark-muted;
+  }
+}
+
+/* Tree lines */
+.tree-line {
+  border-left: 1px solid #30363d;
+}
+
+/* Pulse animation for live indicator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
