@@ -1,0 +1,62 @@
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-bg-tertiary);
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  background: var(--color-bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.placeholder ul {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.placeholder li {
+  color: var(--color-text-secondary);
+  padding: 0.5rem;
+  background: var(--color-bg-tertiary);
+  border-radius: 4px;
+}
+
+.loading {
+  color: var(--color-text-secondary);
+}
+
+.error {
+  color: var(--color-error);
+}

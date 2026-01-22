@@ -1,0 +1,101 @@
+.health-status {
+  display: grid;
+  gap: 1rem;
+}
+
+.overall-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--color-bg-tertiary);
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.overall-status.ok .status-indicator {
+  background: var(--color-success);
+}
+
+.overall-status.degraded .status-indicator {
+  background: var(--color-error);
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.timestamp {
+  margin-left: auto;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  padding: 1rem;
+  background: var(--color-bg-primary);
+  border-radius: 6px;
+  border-left: 3px solid;
+}
+
+.service-card.ok {
+  border-left-color: var(--color-success);
+}
+
+.service-card.error {
+  border-left-color: var(--color-error);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.service-card.ok .status-dot {
+  background: var(--color-success);
+}
+
+.service-card.error .status-dot {
+  background: var(--color-error);
+}
+
+.service-name {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.service-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.error-msg {
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
